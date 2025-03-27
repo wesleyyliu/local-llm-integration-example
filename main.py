@@ -18,7 +18,7 @@ BASE_COMPLETIONS_URL = f"{BASE_HOST}/completions"
 
 # Configure loguru: initially set to INFO (students can change to DEBUG as needed)
 loguru.logger.remove()
-loguru.logger.add(sys.stderr, level="INFO")
+loguru.logger.add(sys.stderr, level="DEBUG")
 
 
 # 1) Direct JSON POST approach
