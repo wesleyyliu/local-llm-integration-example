@@ -47,7 +47,7 @@ def call_model_directly(
     # Extract the response to the prompt from the response to this query
     json_object = response.json()
 
-    loguru.logger.debug("Received response: {}", json_object)
+    loguru.logger.debug("Received response: {}", json.dumps(json_object))
 
     # Check if the response contains 'choices' and 'text'
     if "choices" in json_object and len(json_object["choices"]) > 0:

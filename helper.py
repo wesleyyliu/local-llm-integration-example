@@ -45,7 +45,7 @@ def check_lm_studio_server(
 
     # 3) Check that we got valid JSON, and that it has the structure we expect
     data = response.json()
-    loguru.logger.debug("Received data from models endpoint: {}", data)
+    loguru.logger.debug("Received data from models endpoint: {}", json.dumps(data))
     if "data" not in data or not isinstance(data["data"], list):
         loguru.logger.error("The /models response did not contain 'data' as a list.")
         raise ValueError("The /models response did not contain 'data' as a list.")
